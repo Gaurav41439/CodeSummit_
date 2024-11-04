@@ -39,7 +39,7 @@
 body{
     color: var(--text-color);
     background: var(--bg-color);
-    background-image: url(../logos/bg.png);
+    background-image: url(/logos/bg.png);
     overflow-x: hidden;
 }
 
