@@ -71,7 +71,7 @@
     </section>
 
     <!--ABOUT SECTION-->
-    <section class="about">
+    <section class="about container">
         <h1 class="heading">About Code<span>Summit_</span></h1>
         <br>
         <div class="container-box">
@@ -122,8 +122,51 @@
         </div>
     </section>
 
+
+    <!-- picture section -->
+    <div class="slider-section container">
+        <h1 class="heading">How It <span>Went</span></h1>
+        <div class="slider-wrapper">
+            <div class="slider-card">
+                <img src="test.JPG" alt="Image 1">
+                <p>Card 1</p>
+            </div>
+            <div class="slider-card">
+                <img src="image2.jpg" alt="Image 2">
+                <p>Card 2</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+    
  
-    <section class="sponsors-section">
+
+    <!-- sponsor section -->
+    <section class="sponsors-section container">
         <div>
             <h1 class="heading">Our <span>Sponsors</span></h1>
 
@@ -150,8 +193,128 @@
     </section>
 
 
+    <div class="faq-section container">
+
+        <h1 class="heading"><span>FAQs</span></h1>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                What is your return policy?
+            </div>
+            <div class="faq-answer">
+                Our return policy allows you to return items within 30 days of purchase.
+            </div>
+        </div>
+        <hr>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                How do I track my order?
+            </div>
+            <div class="faq-answer">
+                You can track your order through the link sent in your confirmation email.
+            </div>
+        </div>
+        <hr>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                Do you offer international shipping?
+            </div>
+            <div class="faq-answer">
+                Yes, we ship to select countries worldwide. Check our shipping page for more info.
+            </div>
+        </div>
+        <hr>
+        <!-- Add more questions as needed -->
+    </div>
+    
+
+
+    <!-- picture section -->
+    <div class="slider-section container">
+        <h1 class="heading">Organizing <span>Team</span></h1>
+        <div class="slider-wrapper">
+            <div class="slider-card">
+                <img src="test.JPG" alt="Image 1">
+                <p>Card 1</p>
+            </div>
+            <div class="slider-card">
+                <img src="image2.jpg" alt="Image 2">
+                <p>Card 2</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <div class="slider-card">
+                <img src="image3.jpg" alt="Image 3">
+                <p>Card 3</p>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+    
+
     <!--JavaScript-->
     <script src="homePage.js"></script>
 
 </body>
+
+
+
+<script>function toggleAnswer(selectedQuestion) {
+    // Get all FAQ items
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+        // If the clicked question is in the current item, toggle its answer
+        if (item.contains(selectedQuestion)) {
+            const answer = item.querySelector('.faq-answer');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        } else {
+            // Close other answers
+            item.querySelector('.faq-answer').style.display = 'none';
+        }
+    });
+}
+</script>
+
+<!-- <script>
+
+
+const sliderWrapper = document.getElementById('auto-scroll');
+
+// Scroll speed (in pixels)
+const scrollSpeed = 1;
+
+function autoScroll() {
+    // Check if the slider is at the end
+    if (sliderWrapper.scrollLeft >= sliderWrapper.scrollWidth - sliderWrapper.clientWidth) {
+        // Reset scroll to the beginning
+        sliderWrapper.scrollLeft = 0;
+    } else {
+        // Scroll to the right
+        sliderWrapper.scrollLeft += scrollSpeed;
+    }
+}
+
+// Set the interval for continuous scrolling
+let scrollInterval = setInterval(autoScroll, 2); // Adjust the interval for speed
+
+</script> -->
+
 </html>

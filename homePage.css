@@ -12,6 +12,13 @@
 
 .heading{
     color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+.container{
+    max-width: 90%;
 }
 
 .heading span{
@@ -39,7 +46,7 @@
 body{
     color: var(--text-color);
     background: var(--bg-color);
-    background-image: url(./logos/bg.png);
+    background-image: url(./logos/bg1.png);
     overflow-x: hidden;
 }
 
@@ -292,4 +299,164 @@ Section{
 .sponsor-card img {
     width: 80%; /* Logo size */
     height: auto;
+}
+
+
+/* Original styles here */
+
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+    /* Adjust container padding for tablets */
+    .container-body {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    /* Adjust main title font size */
+    .main-title {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Hide navbar items and display burger icon on medium screens */
+    .navbar, .h-right {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+    /* Adjust main title font size */
+    .main-title {
+        font-size: 50px;
+    }
+    /* Limit container width */
+    .container-box {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header padding adjustments for mobile */
+    header {
+        padding: 10px 5%;
+    }
+    /* Smaller font size for headings */
+    .main-title {
+        font-size: 40px;
+    }
+    /* Responsive button padding and font */
+    .btn-reg {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    /* Adjust container-box for mobile */
+    .container-box {
+        padding: 20px;
+        max-width: 95%;
+    }
+    /* Smaller sponsor card size for mobile */
+    .sponsor-card {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+/* Slider Section Styling */
+.slider-section {
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.slider-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Enables snap scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.slider-card {
+    min-width: 250px; /* Card width */
+    flex: 0 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    scroll-snap-align: start; /* Snap to start of each card */
+    text-align: center;
+}
+
+.slider-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.slider-card p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Add spacing between cards and hide scrollbar */
+.slider-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .slider-card {
+        min-width: 200px; /* Smaller width on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-card {
+        min-width: 150px; /* Smaller width on mobile */
+    }
+}
+
+
+
+
+
+/* FAQ Section Styling */
+.faq-section {
+    margin: auto;
+    color: #fff; /* White font color */
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-item {
+    padding: 2px 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #4378FF; /* Highlight color on hover */
+}
+
+.faq-answer {
+    display: none;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 10px 0;
+    color: #ccc;
+}
+
+/* Separator line between items */
+hr {
+    border: none;
+    border-top: 1px solid #555; /* Horizontal line styling */
+    margin: 0;
+    opacity: 0.5;
 }
