@@ -43,12 +43,12 @@
     --p-font: 1rem;
 }
 
-body{
+body {
     color: var(--text-color);
-    background: var(--bg-color);
-    background-image: url(./logos/bg1.png);
+    background: linear-gradient( #1e1e1e, #0a4976, #0062a9, #0d446b, #0a4976, #0062a9, #1e1e1e ); /* Deep blue to light blue */
     overflow-x: hidden;
 }
+
 
 /* HEADER AND NAVBAR */
 
@@ -547,3 +547,4 @@ hr {
 .footer-social a:hover {
     color: #4378FF; /* Highlight color on hover */
 }
+ 
